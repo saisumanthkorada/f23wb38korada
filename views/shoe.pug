@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-   
+   - let results = [{Brand: "Nike", Ambassador : "Jordan", price: '$125'},{Brand: "Puma", Ambassador: "Kohli", price: '$135'},{Brand: "Jimmy choo", Ambassador: "Sumanth", price:'$699'}];
+
+  script.
+
+  div.container-fluid
+    div.row
+        each shoe, index in results
+            div.col-sm-2
+                p Brand :  #{shoe.Brand}
+                p Ambassador : #{shoe.Ambassador}
+                p Price: #{shoe.price}
+
+
